@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blue_sheet_events",
+  "info": {
+    "singularName": "blue-sheet-event",
+    "pluralName": "blue-sheet-events",
+    "displayName": "blueSheetEvent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "staffPick": {
+      "type": "boolean"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "startTime": {
+      "type": "time"
+    },
+    "endTime": {
+      "type": "time"
+    },
+    "venue": {
+      "type": "string"
+    },
+    "freeDrinks": {
+      "type": "boolean"
+    },
+    "freeFood": {
+      "type": "boolean"
+    },
+    "rsvpStatus": {
+      "displayName": "rsvpStatus",
+      "type": "component",
+      "repeatable": false,
+      "component": "misc.rsvp-status"
+    },
+    "bluesheet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::spreadsheet.spreadsheet",
+      "inversedBy": "blue_sheet_events"
+    }
+  }
+}

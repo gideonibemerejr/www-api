@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_misc_rsvp_statuses",
+  "info": {
+    "displayName": "rsvpStatus",
+    "icon": "charging-station"
+  },
+  "options": {},
+  "attributes": {
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "open",
+        "not_open",
+        "waitlist",
+        "access_code",
+        "open_with_donation",
+        "open_with_price",
+        "password",
+        "email_to_rsvp",
+        "sold_out",
+        "other"
+      ]
+    },
+    "price": {
+      "type": "string"
+    },
+    "ifOther": {
+      "type": "string"
+    }
+  }
+}

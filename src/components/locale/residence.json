@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_locale_residences",
+  "info": {
+    "displayName": "residence",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "city": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "zipCode": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spreadsheets",
+  "info": {
+    "singularName": "spreadsheet",
+    "pluralName": "spreadsheets",
+    "displayName": "bluesheet"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "year": {
+      "type": "string"
+    },
+    "event": {
+      "type": "string"
+    },
+    "blue_sheet_events": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blue-sheet-event.blue-sheet-event",
+      "mappedBy": "bluesheet"
+    }
+  }
+}
