@@ -18,11 +18,12 @@
     "notes": {
       "type": "text"
     },
-    "date": {
+    "startDate": {
       "type": "date"
     },
     "startTime": {
-      "type": "time"
+      "type": "time",
+      "required": true
     },
     "endTime": {
       "type": "time"
@@ -47,6 +48,19 @@
       "relation": "manyToOne",
       "target": "api::spreadsheet.spreadsheet",
       "inversedBy": "blue_sheet_events"
+    },
+    "name": {
+      "type": "string"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "isAllWeek": {
+      "type": "boolean",
+      "default": false
+    },
+    "link": {
+      "type": "string"
     }
   }
 }
