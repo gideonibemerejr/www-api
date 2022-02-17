@@ -94,6 +94,15 @@
       "type": "boolean",
       "default": false,
       "required": false
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "hasRegistered": {
+      "type": "boolean"
     }
   }
 }
