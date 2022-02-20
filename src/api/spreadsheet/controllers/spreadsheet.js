@@ -11,15 +11,21 @@ module.exports = createCoreController(
   ({ strapi }) => ({
     async create(ctx) {
       // some custom logic here
-      console.log(ctx);
-
+      strapi.log.debug("CREATING");
       // Calling the default core action
-      const { data, meta } = await super.find(ctx);
-
-      // some more custom logic
-      meta.date = Date.now();
-
-      return { data, meta };
+      const response = await super.create(ctx);
+      console.log(response);
+      strapi.log.info("this is context", ctx);
+      strapi.log.info("this is response", response);
+      return response;
+    },
+    async update(ctx) {
+      // some logic here
+      const response = await super.update(ctx);
+      // some more logic
+      strapi.log.info("this is context", ctx);
+      strapi.log("this is response", response);
+      return response;
     },
   })
 );

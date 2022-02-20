@@ -4,20 +4,16 @@
 
 // /**
 //  * Create a new Sheets helper.
-//  * @param {string} accessToken An authorized OAuth2 access token.
 //  * @constructor
 //  */
 
-// const auth = new google.auth.GoogleAuth({
-//   keyFile: "credentials.json",
-//   scopes: "https://www.googleapis.com/auth/spreadsheets",
-// });
-
-// const SheetsHelper = async function (accessToken) {
-//   const client = await auth.getClient();
+// const SheetsHelper = async function () {
+//   const auth = await google.auth.getClient({
+//     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+//   });
 //   this.service = google.sheets({
 //     version: "v4",
-
+//     auth,
 //   });
 // };
 

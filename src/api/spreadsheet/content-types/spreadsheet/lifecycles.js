@@ -14,13 +14,4 @@ const columns = [
   { field: "notes", header: "Notes" },
 ];
 
-module.exports = {
-  afterCreate(event) {
-    const { result, params } = event;
-    console.log(result);
-  },
-  afterUpdate(event) {
-    const { result, params } = event;
-    console.log(result);
-  },
-};
+module.exports = {};
