@@ -4,7 +4,8 @@
   "info": {
     "singularName": "spreadsheet",
     "pluralName": "spreadsheets",
-    "displayName": "bluesheet"
+    "displayName": "bluesheet",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,9 @@
       "relation": "oneToMany",
       "target": "api::blue-sheet-event.blue-sheet-event",
       "mappedBy": "bluesheet"
+    },
+    "spreadSheetId": {
+      "type": "string"
     }
   }
 }
