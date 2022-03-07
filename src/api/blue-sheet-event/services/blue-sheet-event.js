@@ -10,6 +10,7 @@ module.exports = createCoreService(
   "api::blue-sheet-event.blue-sheet-event",
   ({ strapi }) => ({
     async syncGoogleSheet() {
+      if (process.env.NODE_ENV === "development") return;
       try {
         const { sheets } = await SheetsHelper.authentication();
         const { data } = await sheets.spreadsheets.get({
