@@ -19,7 +19,7 @@ module.exports = createCoreService(
         //   spreadsheetId: SheetsHelper.SPREADSHEET_ID,
         // });
 
-        // const sheetId = await sheetData.sheets?.[0].properties.sheetId;
+        // const sheetId = await sheetData.sheets.[0].properties.sheetId;
 
         // const events = await strapi.entityService.findMany(
         //   "api::blue-sheet-event.blue-sheet-event",
@@ -88,7 +88,7 @@ module.exports = createCoreService(
         const { data } = await sheets.spreadsheets.get(getAllRequest);
         const theSheets = await data.sheets
           .map((sheet) => {
-            const newRowData = sheet.data[0]?.rowData.map((row) => {
+            const newRowData = sheet.data[0].rowData.map((row) => {
               let newItem = {
                 blueSheet: [2],
               };
@@ -96,19 +96,19 @@ module.exports = createCoreService(
               row.values.forEach((item, index) => {
                 switch (index) {
                   case 0:
-                    newItem.staffPick = item?.formattedValue ? true : false;
+                    newItem.staffPick = item.formattedValue ? true : false;
                   case 1:
-                    newItem.name = item?.formattedValue;
+                    newItem.name = item.formattedValue;
                     break;
                   case 2: {
                     if (
-                      item?.formattedValue === "TBA" ||
-                      item?.formattedValue === "Late"
+                      item.formattedValue === "TBA" ||
+                      item.formattedValue === "Late"
                     ) {
                       newItem.startTime = "Invalid Date";
                     } else {
                       newItem.startTime = moment(
-                        item?.formattedValue,
+                        item.formattedValue,
                         "h:mm A"
                       ).format("HH:mm:ss.SSS");
                     }
@@ -118,13 +118,13 @@ module.exports = createCoreService(
 
                   case 3: {
                     if (
-                      item?.formattedValue === "TBA" ||
-                      item?.formattedValue === "Late"
+                      item.formattedValue === "TBA" ||
+                      item.formattedValue === "Late"
                     ) {
                       newItem.endTime = "Invalid Date";
                     } else {
                       newItem.endTime = moment(
-                        item?.formattedValue,
+                        item.formattedValue,
                         "h:mm A"
                       ).format("HH:mm:ss.SSS");
                     }
@@ -132,25 +132,25 @@ module.exports = createCoreService(
                     break;
                   }
                   case 4:
-                    newItem.venue = item?.formattedValue;
+                    newItem.venue = item.formattedValue;
                     break;
                   case 5:
-                    newItem.address = item?.formattedValue;
+                    newItem.address = item.formattedValue;
                     break;
                   case 6:
-                    newItem.freeDrinks = item?.formattedValue ? true : false;
+                    newItem.freeDrinks = item.formattedValue ? true : false;
                     break;
                   case 7:
-                    newItem.freeFood = item?.formattedValue ? true : false;
+                    newItem.freeFood = item.formattedValue ? true : false;
                     break;
                   case 8:
-                    newItem.notes = item?.formattedValue;
+                    newItem.notes = item.formattedValue;
                   default:
                     break;
                 }
 
-                if (item?.hyperlink) {
-                  newItem.link = item?.hyperlink;
+                if (item.hyperlink) {
+                  newItem.link = item.hyperlink;
                 }
 
                 newItem.startDate = moment(
