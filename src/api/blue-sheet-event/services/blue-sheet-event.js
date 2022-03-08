@@ -180,7 +180,7 @@ module.exports = createCoreService(
             data: theSheets,
           });
 
-        return theSheets;
+        return response;
       } catch (error) {
         console.log(error);
       }
