@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -23,7 +23,7 @@
     },
     "startTime": {
       "type": "time",
-      "required": true
+      "required": false
     },
     "endTime": {
       "type": "time"
@@ -37,12 +37,6 @@
     "freeFood": {
       "type": "boolean"
     },
-    "rsvpStatus": {
-      "displayName": "rsvpStatus",
-      "type": "component",
-      "repeatable": false,
-      "component": "misc.rsvp-status"
-    },
     "bluesheet": {
       "type": "relation",
       "relation": "manyToOne",
@@ -52,14 +46,10 @@
     "name": {
       "type": "string"
     },
-    "endDate": {
-      "type": "date"
-    },
-    "isAllWeek": {
-      "type": "boolean",
-      "default": false
-    },
     "link": {
+      "type": "string"
+    },
+    "address": {
       "type": "string"
     }
   }
