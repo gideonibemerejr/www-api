@@ -185,33 +185,5 @@ module.exports = createCoreService(
         console.log(error);
       }
     },
-    async updateBlueSheetEvents({ blueSheetId }) {
-      try {
-        const entries = await strapi.db
-          .query("api::blue-sheet-event.blue-sheet-event")
-          .findMany({
-            populate: { bluesheet: true },
-            where: {
-              bluesheet: null,
-            },
-          });
-
-        entries.forEach(async (entry) => {
-          const updated = await strapi.db
-            .query("api::blue-sheet-event.blue-sheet-event")
-            .update({
-              where: {
-                id: entry.id,
-              },
-              data: {
-                bluesheet: [blueSheetId],
-              },
-            });
-        });
-        return { count: entries.length, entries };
-      } catch (error) {
-        console.log(error);
-      }
-    },
   })
 );
