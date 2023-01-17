@@ -20,5 +20,16 @@ module.exports = createCoreController(
         ctx.badRequest(error);
       }
     },
+    async updateEvent(ctx) {
+      try {
+        const response = await strapi
+          .service("api::blue-sheet-event.blue-sheet-event")
+          .updateBlueSheetEvents(ctx.request.body);
+
+        ctx.send(response);
+      } catch (error) {
+        ctx.badRequest(error);
+      }
+    },
   })
 );

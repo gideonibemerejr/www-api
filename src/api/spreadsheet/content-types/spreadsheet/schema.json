@@ -26,6 +26,12 @@
     },
     "spreadSheetId": {
       "type": "string"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
     }
   }
 }
