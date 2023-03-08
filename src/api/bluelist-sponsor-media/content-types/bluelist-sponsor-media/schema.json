@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "bluelist_sponsor_medias",
+  "info": {
+    "singularName": "bluelist-sponsor-media",
+    "pluralName": "bluelist-sponsor-medias",
+    "displayName": "Bluelist Sponsor Media"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}
