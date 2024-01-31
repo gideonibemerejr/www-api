@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "event": {
-      "displayName": "link",
-      "type": "component",
-      "repeatable": false,
-      "component": "basic.link"
-    },
     "startDate": {
       "type": "date"
     },
@@ -40,6 +34,15 @@
         "medium",
         "low"
       ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "event": {
+      "type": "string"
     }
   }
 }
