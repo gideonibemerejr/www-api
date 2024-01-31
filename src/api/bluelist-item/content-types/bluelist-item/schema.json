@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bluelist_items",
+  "info": {
+    "singularName": "bluelist-item",
+    "pluralName": "bluelist-items",
+    "displayName": "BluelistItem",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "event": {
+      "displayName": "link",
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.link"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "venue": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "rsvpStatus": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "enumeration",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "bluelists",
+  "info": {
+    "singularName": "bluelist",
+    "pluralName": "bluelists",
+    "displayName": "Bluelist",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titile": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "mainEvent": {
+      "type": "string"
+    }
+  }
+}
