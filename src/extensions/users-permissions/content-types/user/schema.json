@@ -107,7 +107,7 @@
     "favorites": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::bluelist-item.bluelist-item"
+      "target": "api::blue-sheet-event.blue-sheet-event"
     }
   }
 }
