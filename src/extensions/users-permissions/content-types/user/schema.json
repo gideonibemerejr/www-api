@@ -103,6 +103,11 @@
     },
     "hasRegistered": {
       "type": "boolean"
+    },
+    "favorites": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::bluelist-item.bluelist-item"
     }
   }
 }
