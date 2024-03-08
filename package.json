@@ -21,11 +21,10 @@
     "moment": "^2.29.1",
     "pg": "^8.7.3",
     "pg-connection-string": "^2.5.0",
-    "sharp": "^0.33.2",
-    "sqlite3": "5.0.2"
+    "sharp": "^0.33.2"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Gideon Ibemere, Jr"
   },
   "strapi": {
     "uuid": "75cfec10-a705-4560-97bb-4675aa88e8b0"
